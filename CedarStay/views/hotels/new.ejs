@@ -1,0 +1,67 @@
+<% layout ('layouts/boilerplate') %>
+        <div class="row">
+            <h1 class="text-center">New Hotel</h1>
+            <div class="col-md-6 offset-md-3">
+                <form action="/hotels" method="POST" novalidate class="validated-form"> 
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Title</label>
+                        <input class="form-control" type="text" id="title" name="hotel[title]" required> <!-- grouping content together-->
+                        <div class="valid-feedback">
+                            <strong>Looks good!</strong>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="location">Location</label>
+                        <input class="form-control" type="text" id="location" name="hotel[location]" required> <!-- grouping content together-->
+                        <div class="valid-feedback">
+                            <strong>Looks good!</strong>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image1">Image URL 1</label>
+                        <input class="form-control" type="text" id="image1" name="hotel[image]"  required> 
+                        <div class="valid-feedback">
+                            <strong>Looks good!</strong>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image2">Image URL 2</label>
+                        <input class="form-control" type="text" id="image2" name="hotel[image]"  required> 
+                        <div class="valid-feedback">
+                            <strong>Looks good!</strong>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image3">Image URL 3</label>
+                        <input class="form-control" type="text" id="image3" name="hotel[image]"  required> 
+                        <div class="valid-feedback">
+                            <strong>Looks good!</strong>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="price">Hotel Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="price-label">$</span>
+                                <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="hotel[price]" required>
+                                <div class="valid-feedback">
+                                    <strong>Looks good!</strong>
+                                </div> 
+                            </div>   
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Description</label>
+                        <textarea class="form-control" type="text" id="description" name="hotel[description]" required></textarea> <!-- grouping content together-->
+                        <div class="valid-feedback">
+                            <strong>Looks good!</strong>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success">Add Hotel</button>
+                    </div>
+                </form>
+                <a href="/hotels">All hotels</a>
+            </div>
+        </div>
+
+
+

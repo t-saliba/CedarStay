@@ -1,0 +1,35 @@
+<% layout ('layouts/boilerplate') %>
+
+<div class="container">
+<div class="row">
+<div class="col-6 mb-3">
+    <div class="card" style="width: 50%;">
+    <div id="map"></div>
+</div>
+</div>
+<div class="col-ml-auto">
+    <div class="card mb-5" style="width: 50%;">
+    <h4>Suggested Places to Visit</h4>
+    <p>Here are some suggested places you can visit while you stay at the hotel:</p>
+    <ul class="list-group">
+            <li class="list-group-item"><%= place_1[0].properties.name %></li>
+            <li class="list-group-item"><%= place_1[1].properties.name %></li>
+            <li class="list-group-item"><%= place_2[0].properties.name %></li>
+            <li class="list-group-item"><%= place_2[1].properties.name %></li>
+            <li class="list-group-item"><%= place_3[0].properties.name %></li>
+            <li class="list-group-item"><%= place_3[1].properties.name %></li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+    const mapToken = '<%-process.env.MAPBOX_ACCESS_TOKEN%>';
+    const hotel = <%- JSON.stringify(hotel) %>;
+    const place_1 = <%- JSON.stringify(place_1) %>;
+    const place_2 = <%- JSON.stringify(place_2) %>;
+    const place_3 = <%- JSON.stringify(place_3) %>
+</script>
+<script src="/javascripts/tripPageMap.js"></script>
